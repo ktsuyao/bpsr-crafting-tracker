@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BPSR Crafting Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+<script defer data-domain="bpsr-crafting-tracker.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script></head>
+<body>
+
+  <button id="toggle-dark">🌙 Toggle Dark Mode</button>
+
+  <div class="horizontal-wrapper">
+    <section id="crafting-list-panel" class="side-panel">
+      <h2>📋 Crafting List</h2>
+      <ul id="crafting-list"></ul>
+      <button id="calculate-raw">🧮 Calculate Raw Materials</button>
+      <pre id="raw-material-summary"></pre>
+    </section>
+
+
+  <main class="three-panel-layout">
+    <section class="left-panel">
+      <h1>🔁 BPSR Crafting Tracker</h1>
+      <h2>📋 Recipe Preview</h2>
+      <pre id="recipe-preview"></pre>
+      <button id="add-to-crafting-list">📋 Add to Crafting List</button>
+      <h2>🧱 Material Tree</h2>
+      <ul id="material-list"></ul>
+    </section>
+
+    <section class="middle-panel">
+      <h2>🧰 Crafting Setup</h2>
+      <label>Item to Craft:
+        <input type="text" id="main-item" placeholder="e.g. Iron Sword" />
+      </label>
+      <label>How many items to craft:
+        <input type="number" id="item-multiplier" value="1" min="1" />
+      </label>
+
+      <h2>🔧 Material Entry</h2>
+      <input id="mat-name" type="text" placeholder="e.g. Iron Ore" list="material-suggestions" />
+      <datalist id="material-suggestions"></datalist>
+      <input type="number" id="mat-qty" placeholder="Quantity" min="1" />
+      <input type="text" id="mat-note" placeholder="Note (optional)" />
+      <label>
+        <input type="checkbox" id="mat-crafted" />
+        Crafted
+      </label>
+      <label>
+        <input type="checkbox" id="mat-raw" />
+        Raw
+      </label>
+
+      <select id="parent-select">
+        <option value="">-- Root Level --</option>
+      </select>
+      <button id="add-material">➕ Add Material</button>
+
+      <h2>💾 Recipe Controls</h2>
+      <button id="save-recipe">💾 Save Recipe</button>
+      <button id="reset-all">🔄 Reset All</button>
+    </section>
+
+    
+  </main>
+    <section class="right-panel">
+      <h2>📂 Load Saved Recipe</h2>
+      <input type="text" id="recipe-search" placeholder="Search recipe name..." autocomplete="off" />
+      <ul id="recipe-results"></ul>
+
+      <h2>🕒 Recently Added</h2>
+      <ul id="recent-recipes"></ul>
+    </section>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
