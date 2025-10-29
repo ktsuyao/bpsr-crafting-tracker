@@ -67,6 +67,3 @@ rawRequired = qty × craftsNeeded
 
 MIT — free to use, adapt, and share.
 
----
-
-Would you like me to format this as a printable TN insert or turn it into a GitHub Pages landing page with visuals and links? I’d love to help you share it beautifully.
